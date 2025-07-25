@@ -12,8 +12,8 @@
 :root {
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
+    --text-color: #FFEFCB;
+    --main-color: #D0312D;
 }
 
 html {
@@ -183,10 +183,6 @@ span {
     text-align: left;
     line-height: 1.2;
 
-}
-
-.about-content h3{
-    font-size: 2.6rem;
 }
 
 .about-content p {
