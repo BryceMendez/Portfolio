@@ -128,8 +128,8 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     background: transparent;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
@@ -172,6 +172,7 @@ span {
 
 .about-img img{
     width: 35vw;
+    margin-right: 7rem;
 }
 
 .heading{
@@ -182,12 +183,35 @@ span {
 .about-content h2{
     text-align: left;
     line-height: 1.2;
+    margin-bottom: 2rem;
 
 }
 
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+}
+
+.about-content .services-box {
+    flex: 1 1 30rem;
+    background: var(--bg-color);
+    padding: 3rem 3rem 1rem;
+    border-radius: 2rem;
+    text-align: left;
+    border: .2rem solid var(--bg-color);
+    margin-bottom: 2rem;
+}
+
+.about-content .services-box:hover {
+    border-width: .3rem;
+    transform: scale(1.06);
+    transition: .5 ease;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+}
+
+.about-content .btn{
+    margin-top: 2rem;
 }
 
 .services h2{
@@ -213,7 +237,8 @@ span {
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    border-width: .5rem;
+    transform: scale(1.04);
     transition: .5 ease;
 }
 
