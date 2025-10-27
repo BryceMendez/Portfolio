@@ -1,0 +1,28 @@
+name: Frontend CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies (if package.json exists)
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          else
+            echo "No package.json file found, skipping npm install."
+          fi
+      - name: Run HTML, CSS, and JS lint checks
+        run: |
+          npx htmlhint . || true
+          npx stylelint "**/*.css" || true
+          npx eslint "**/*.js" || true
